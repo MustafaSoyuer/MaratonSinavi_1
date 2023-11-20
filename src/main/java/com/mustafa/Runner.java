@@ -7,6 +7,7 @@ import com.mustafa.enums.EDurum;
 public class Runner {
     public static void main(String[] args) {
 
+        // Ali ve Selin Hasta durumundalar aşı yapılabilir.normal insan hastalık bulaştırabilir
         Insan insan1 = new NormalInsan("Ali","Can", ECinsiyet.ERKEK,40, EDurum.HASTA);
         Saglik.asilamaYap(insan1);
         System.out.println(); // boşluk
@@ -36,11 +37,8 @@ public class Runner {
 
         Saglik.raporAl();
 
+
     }// main sonu
-
-
-
-
 
 
 }// class sonu

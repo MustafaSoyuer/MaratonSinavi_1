@@ -8,13 +8,13 @@ public class Saglik {
         InsanDB.arrayBoyutKontrol(); // array boyutu kontrol edildi
 
         if (insan instanceof IHastalik) { // insan değişkeni IHastalık interfaceini implement etmiş mi diye bakıyoruz
-            IHastalik hastalik = (IHastalik) insan;
+            IHastalik hastalik = (IHastalik) insan; //cast işlemi
             hastalik.hastalikBulas(); // bu metod ile hastalık bulaştırıyoruz
             if (insan.hastalikVarMi()) { // hastalik var ise
 
                     insan.asiYapildi();
 
-                ((Insan) insan).setHastalikVar(false); // Hastalığı temizle set ile hastalık yoktur yapıyoruz
+                insan.setHastalikVar(false); // Hastalığı temizle set ile hastalık yoktur yapıyoruz
                 InsanDB.asilamaListesi[InsanDB.asilamaSayisi++] = insan; // girilen insan değişkenini asılamalistesi arrayine ekliyoruz
                                                                          // aşılanan sayısını arttırıyoruz
                 System.out.println(insan.getAd() + " aşılandı!"); // çıktı veriyoruz
